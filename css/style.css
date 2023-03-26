@@ -1,4 +1,4 @@
-/* *********|RESET|********* */
+/* RESET */
 * {
   padding: 0;
   margin: 0;
@@ -10,7 +10,7 @@ img {
   display: block;
 }    
 
-/* *********|UTILITIES|********* */
+/* utilities */
 .item {
   position: relative;
 }
@@ -21,7 +21,8 @@ img {
   bottom: 40px;
   color: white;
   text-align: right;
-  padding-right: 1rem;
+  padding-right: 2rem;
+  font-size: 1.5rem;
 }
 
 .image-text p {
@@ -34,9 +35,8 @@ img {
   display: block;
 }
 
-/* *********|LAYOUT|********* */
+/* layout */
 .container {
-  overflow-y: auto;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -47,8 +47,7 @@ img {
 .slider {
   display: flex;
   width: 80%;
-  height: 50vw;
-  background-color: rgb(0, 0, 0);
+  height: 50%;
 }    
 
 .slider-items {
@@ -68,7 +67,6 @@ img {
   object-fit: cover;
 }    
 
-/* thumbnails */
 .thumbnails {
   width: 20%;
   position: relative;
@@ -98,30 +96,28 @@ img {
   border: 2px solid white;
 }
 
-/* slider button settings and layout */
 .next-up,
 .prev-down {
-  z-index: 2;
+  z-index: 100;
   background-color: white;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  filter: opacity(.6);
   cursor: pointer;
 }    
 
 .next-up {
-  top: 8px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
 }    
 
 .prev-down {
-  bottom: 8px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
 }       
@@ -137,7 +133,7 @@ img {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 2;
+  z-index: 100;
 }
 
 #replay-icon {
