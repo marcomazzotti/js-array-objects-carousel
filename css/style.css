@@ -1,0 +1,152 @@
+/* *********|RESET|********* */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}    
+
+img {
+  width: 100%;
+  display: block;
+}    
+
+/* *********|UTILITIES|********* */
+.item {
+  position: relative;
+}
+
+.image-text {
+  position: absolute;
+  width: 100%;
+  bottom: 40px;
+  color: white;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.image-text p {
+  width: 80%;
+  margin-left: auto;
+  padding-top: 1rem;
+}
+
+.item.active {
+  display: block;
+}
+
+/* *********|LAYOUT|********* */
+.container {
+  overflow-y: auto;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}    
+
+.slider {
+  display: flex;
+  width: 80%;
+  height: 50vw;
+  background-color: rgb(0, 0, 0);
+}    
+
+.slider-items {
+  height: 100%;
+  width: 80%;
+  position: relative;
+}    
+
+.item {
+  height: 100%;
+  display: none;
+}    
+
+.item img,
+.thumb-item img {
+  height: 100%;
+  object-fit: cover;
+}    
+
+/* thumbnails */
+.thumbnails {
+  width: 20%;
+  position: relative;
+}
+
+.thumbnails-image {
+  display: flex;
+  height: 100%;
+  flex-direction: column-reverse;
+}
+
+.thumb-item {
+  display: block;
+  height: calc(100% / 5);
+  filter: opacity(.5);
+  object-fit: cover;
+}
+
+.thumbnails img {
+  width: 100%;
+}
+
+.thumb-item.active {
+  filter: opacity(1);
+  transform: scale(1.08);
+  z-index: 1;
+  border: 2px solid white;
+}
+
+/* slider button settings and layout */
+.next-up,
+.prev-down {
+  z-index: 2;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  filter: opacity(.6);
+  cursor: pointer;
+}    
+
+.next-up {
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}    
+
+.prev-down {
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}       
+
+#replay {
+  position: absolute;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#replay-icon {
+  font-size: 6rem;
+  display: none;
+}
+
+#replay:hover #replay-icon {
+  cursor: pointer;
+  display: block;
+  filter: opacity(.6);
+}
